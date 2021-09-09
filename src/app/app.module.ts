@@ -9,6 +9,7 @@ import {ContactsComponent} from "./components/contacts/contacts.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditContactComponent } from './components/contacts/edit-contact/edit-contact.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ContactListComponent } from './components/contacts/edit-contact/contact-list/contact-list.component';
 
 let routes: Routes = [
   {path:"", component:HomeComponent},
@@ -21,7 +22,8 @@ let routes: Routes = [
     NavComponent,
     HomeComponent,
     ContactsComponent,
-    EditContactComponent
+    EditContactComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule,

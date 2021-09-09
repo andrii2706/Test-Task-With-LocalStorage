@@ -21,7 +21,7 @@ export class EditContactComponent implements OnInit {
   close(){
     this.dialogRef.close()
   }
-  onFormSumbit(form:NgForm){
+  onEditFormSumbit(form:NgForm){
     if (form.invalid) return
     const updatedContact = {
       ...this.contact,
