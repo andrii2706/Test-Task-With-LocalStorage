@@ -1,1 +1,53 @@
-<p>contacts works!</p>
+<section class="heading-selection">
+  <h1 class="title is-1 has-text-centered">Todos</h1>
+</section>
+<div class="container add-todo-box-container">
+  <div class="add-todo-box">
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+      <h2 class="title is-5">Name</h2>
+      <div class="field is-grouped" style="margin: 0">
+        <input ngModel #contentTextField="ngModel" required minlength="2" name="text" class="input" type="text"
+               placeholder="Name">
+      </div>
+      <h2 class="title is-5">Surname</h2>
+      <div class="field is-grouped" style="margin: 0">
+        <input ngModel #contentTextField="ngModel" required minlength="2" name="text" class="input" type="text"
+               placeholder="Name">
+      </div>
+      <h2 class="title is-5">Age</h2>
+      <div class="field is-grouped" style="margin: 0">
+        <input ngModel #contentTextField="ngModel" required minlength="2" name="number" class="input" type="text"
+               placeholder="Name">
+      </div>
+      <h2 class="title is-5">Email</h2>
+      <div class="field is-grouped" style="margin: 0">
+        <input ngModel #contentTextField="ngModel" required minlength="2" name="text" class="input" type="text"
+               placeholder="Name">
+      </div>
+      <h2 class="title is-5">BirthData</h2>
+      <div class="field is-grouped" style="margin: 0">
+        <input ngModel #contentTextField="ngModel" required minlength="2" name="number" class="input" type="text"
+               placeholder="Name">
+      </div>
+      <h2 class="title is-5">City</h2>
+      <div class="field is-grouped" style="margin: 0">
+        <input ngModel #contentTextField="ngModel" required minlength="2" name="text" class="input" type="text"
+               placeholder="Name">
+      </div>
+      <h2 class="title is-5">Street</h2>
+      <div class="field is-grouped" style="margin: 0">
+        <input ngModel #contentTextField="ngModel" required minlength="2" name="text" class="input" type="text"
+               placeholder="Name">
+      </div>
+      <h2 class="title is-5">Mobile</h2>
+      <div class="field is-grouped" style="margin: 0">
+        <input ngModel #contentTextField="ngModel" required minlength="2" name="number" class="input" type="text"
+               placeholder="Name">
+      </div>
+      <button type="submit" class="button alt-gradient-button">
+        <i class="material-icons">add</i>
+        Add
+      </button>
+    </form>
+  </div>
+</div>

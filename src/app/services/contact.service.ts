@@ -13,9 +13,6 @@ export class ContactService {
   getAllContacts() {
     return this.contacts
   }
-  getItemById(id:number, contact:IContact){
-    this.contacts[id] = contact
-  }
   addContact(contact: IContact){
     this.contacts.push(contact)
   }
