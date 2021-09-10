@@ -1,56 +1,63 @@
-<section class="heading-selection">
-  <h1 class="title is-1 has-text-centered">Todos</h1>
-</section>
-<div class="container add-todo-box-container">
-  <div class="add-todo-box">
-    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
-      <h2 class="title is-5">Name</h2>
-      <div class="field is-grouped" style="margin: 0">
-        <input ngModel #contentTextField="ngModel" required minlength="2" name="name" class="input" type="text"
-               placeholder="Name">
+<div class="card">
+  <div class="info">
+    <div class="container add-todo-box-container">
+      <div class="add-todo-box">
+        <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+          <h2 class="title is-5">Name</h2>
+          <div class="field is-grouped" style="margin: 0">
+            <input ngModel #contentTextField="ngModel" required minlength="2" name="name" class="input" type="text"
+                   placeholder="Name">
+          </div>
+          <h2 class="title is-5">Surname</h2>
+          <div class="field is-grouped" style="margin: 0">
+            <input ngModel #contentTextField="ngModel" required minlength="2" name="surname" class="input" type="text"
+                   placeholder="Name">
+          </div>
+          <h2 class="title is-5">Age</h2>
+          <div class="field is-grouped" style="margin: 0">
+            <input ngModel #contentTextField="ngModel" required minlength="2" name="age" class="input" type="text"
+                   placeholder="Name">
+          </div>
+          <h2 class="title is-5">Email</h2>
+          <div class="field is-grouped" style="margin: 0">
+            <input ngModel #contentTextField="ngModel" required minlength="2" name="email" class="input" type="text"
+                   placeholder="Name">
+          </div>
+          <h2 class="title is-5">BirthData</h2>
+          <div class="field is-grouped" style="margin: 0">
+            <input ngModel #contentTextField="ngModel" required minlength="2" name="birthdat" class="input" type="text"
+                   placeholder="Name">
+          </div>
+          <h2 class="title is-5">City</h2>
+          <div class="field is-grouped" style="margin: 0">
+            <input ngModel #contentTextField="ngModel" required minlength="2" name="city" class="input" type="text"
+                   placeholder="Name">
+          </div>
+          <h2 class="title is-5">Street</h2>
+          <div class="field is-grouped" style="margin: 0">
+            <input ngModel #contentTextField="ngModel" required minlength="2" name="street" class="input" type="text"
+                   placeholder="Name">
+          </div>
+          <h2 class="title is-5">Mobile</h2>
+          <div class="field is-grouped" style="margin: 0">
+            <input ngModel #contentTextField="ngModel" required minlength="2" name="mobile" class="input" type="text"
+                   placeholder="Name">
+          </div>
+          <button type="submit" class="button alt-gradient-button">
+            <i class="material-icons">add</i>
+            Add
+          </button>
+        </form>
       </div>
-      <h2 class="title is-5">Surname</h2>
-      <div class="field is-grouped" style="margin: 0">
-        <input ngModel #contentTextField="ngModel" required minlength="2" name="text" class="input" type="text"
-               placeholder="Name">
-      </div>
-      <h2 class="title is-5">Age</h2>
-      <div class="field is-grouped" style="margin: 0">
-        <input ngModel #contentTextField="ngModel" required minlength="2" name="number" class="input" type="text"
-               placeholder="Name">
-      </div>
-      <h2 class="title is-5">Email</h2>
-      <div class="field is-grouped" style="margin: 0">
-        <input ngModel #contentTextField="ngModel" required minlength="2" name="text" class="input" type="text"
-               placeholder="Name">
-      </div>
-      <h2 class="title is-5">BirthData</h2>
-      <div class="field is-grouped" style="margin: 0">
-        <input ngModel #contentTextField="ngModel" required minlength="2" name="number" class="input" type="text"
-               placeholder="Name">
-      </div>
-      <h2 class="title is-5">City</h2>
-      <div class="field is-grouped" style="margin: 0">
-        <input ngModel #contentTextField="ngModel" required minlength="2" name="text" class="input" type="text"
-               placeholder="Name">
-      </div>
-      <h2 class="title is-5">Street</h2>
-      <div class="field is-grouped" style="margin: 0">
-        <input ngModel #contentTextField="ngModel" required minlength="2" name="text" class="input" type="text"
-               placeholder="Name">
-      </div>
-      <h2 class="title is-5">Mobile</h2>
-      <div class="field is-grouped" style="margin: 0">
-        <input ngModel #contentTextField="ngModel" required minlength="2" name="number" class="input" type="text"
-               placeholder="Name">
-      </div>
-      <button type="submit" class="button alt-gradient-button">
-        <i class="material-icons">add</i>
-        Add
-      </button>
-    </form>
+    </div>
   </div>
-  <div *ngFor="let contact of contacts">
-    <h3>{{contact.name}}</h3>
+  <div class="info">
+    <div class="contact-component">
+      <app-contact *ngFor="let contact of contacts" [contact]="contact"
+        (editClicked) = "editContact(contact)"
+        (deleteClieked)="deleteTode(contact)"
+      ></app-contact>
+    </div>
+
   </div>
 </div>

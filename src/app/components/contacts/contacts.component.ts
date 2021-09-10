@@ -55,4 +55,6 @@ export class ContactsComponent implements OnInit {
     const id = this.contacts.indexOf(contact)
     this.contactService.deleteContact(id)
   }
+
+
 }

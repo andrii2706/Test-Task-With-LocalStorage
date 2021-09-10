@@ -37,6 +37,8 @@ export class ContactService {
   deleteContact(id: number) {
   const allContacts = this.getAllContacts();
   const contact = allContacts.filter(value => value.id !== id);
+  let lastId = contact.length?contact[0].id:0;
   localStorage.setItem(this.contactKey, JSON.stringify(contact))
   }
+
 }

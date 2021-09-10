@@ -1,0 +1,29 @@
+.intro-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  a{
+    margin: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    background: cornflowerblue;
+
+    border: 1px solid cornflowerblue;
+    border-radius: 10px;
+
+    padding: 5px;
+    &:hover{
+      font-size: 15px;
+
+      -webkit-transition: .2s ease-out;
+      -webkit-transition-delay: 0.5s;
+      -o-transition: .2s ease-out;
+      -o-transition-delay: 0.5s;
+      -moz-transition: .2s ease-out;
+      -moz-transition-delay: 0.5s;
+      transition: .2s ease-out;
+      transition-delay: 0.5s;
+    }
+  }
+}

@@ -9,11 +9,12 @@ import {ContactsComponent} from "./components/contacts/contacts.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditContactComponent } from './components/contacts/edit-contact/edit-contact.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { ContactListComponent } from './components/contacts/edit-contact/contact-list/contact-list.component';
+import { ContactComponent } from './components/contacts/edit-contact/contact/contact.component';
+import { DetailsComponent } from './components/contacts/edit-contact/contact/details/details.component';
 
 let routes: Routes = [
   {path:"", component:HomeComponent},
-  {path:"contacts", component:ContactsComponent}
+  {path:"contacts", component:ContactsComponent},
 ];
 
 @NgModule({
@@ -23,7 +24,8 @@ let routes: Routes = [
     HomeComponent,
     ContactsComponent,
     EditContactComponent,
-    ContactListComponent
+    ContactComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

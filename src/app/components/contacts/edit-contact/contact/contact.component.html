@@ -1,0 +1,31 @@
+<div>
+  <table>
+    <tr>
+      <td>Name</td>
+      <td>Surname</td>
+      <td>Age</td>
+      <td>Mobile</td>
+      <td>Buttons</td>
+    </tr>
+    <tr>
+      <td class="margin"><h3>{{contact.name}}</h3></td>
+      <td class="margin"><h3>{{contact.surname}}</h3></td>
+      <td class="margin"><h3>{{contact.age}}</h3></td>
+      <td class="margin">{{contact.mobile}}</td>
+      <td>
+
+      </td>
+      <td>
+          <div class="todo-controls-box flex" appToolTipSingleton (click)="$event.stopPropagation()">
+            <div class="todo-control-button" appToolTip="Edit Contact" >
+              <button class="btn" (click)="onEditClicked()"><i class="material-icons center">edit</i></button>
+            </div>
+            <div class="todo-control-button" appToolTip="Delete Contact" >
+              <button class="btn" (click)="onDeletedClick()"><i class="material-icons center">delete</i></button>
+            </div>
+          </div>
+      </td>
+    </tr>
+  </table>
+<!--  <h2>{{contact.name}}</h2>-->
+</div>
